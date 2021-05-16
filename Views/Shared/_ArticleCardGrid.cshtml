@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Article>
+
+<div class="article-card-grid">
+    @foreach (var article in Model)
+    {
+        <a asp-route="productdetails" asp-route-urlSlug="@article.UrlSlug">
+            <div class="product-card">
+                <img src="@article.Image" alt="@article.Name" />
+                <div>
+                    <span class="name">
+                        @article.Name
+                    </span>
+                    <span class="price">
+                        @article.Price kr
+                    </span>
+                </div>
+            </div>
+        </a>
+    }
+</div>
