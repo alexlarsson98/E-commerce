@@ -1,0 +1,16 @@
+﻿@model Article
+
+<img src="@Model.Image" alt="@Model.Name" />
+<div>
+    <h1>@Model.Name</h1>
+    <div>
+        @Model.Description
+    </div>
+    <div>
+        @Model.Price SEK
+    </div>
+    <form asp-route="AddToCart" method="post">
+        <input type="hidden" name="productId" value="@Model.Id" />
+        <button>Add to cart</button>
+    </form>
+</div>

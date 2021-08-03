@@ -1,0 +1,14 @@
+﻿<li class="nav-item">
+    <a class="nav-link text-dark" asp-controller="Articles" asp-action="Index">Fashion</a>
+    <ul>
+        @foreach (var category in Model)
+        {
+        <li>
+            <a class="nav-link text-dark" asp-route="category" asp-route-urlSlug="@category.UrlSlug">@category.Name</a>
+        </li>
+        }
+        <li>
+            <a class="nav-link text-dark" asp-controller="Categories" asp-action="Index">All Categories</a>
+        </li>
+    </ul>
+</li>

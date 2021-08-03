@@ -3,8 +3,8 @@
 <div class="article-card-grid">
     @foreach (var article in Model)
     {
-        <a asp-route="productdetails" asp-route-urlSlug="@article.UrlSlug">
-            <div class="product-card">
+        <a asp-route="articledetails" asp-route-urlSlug="@article.UrlSlug">
+            <div class="article-card">
                 <img src="@article.Image" alt="@article.Name" />
                 <div>
                     <span class="name">

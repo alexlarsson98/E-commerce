@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Category>
+
+<div class="category-card-grid">
+    @foreach (var category in Model)
+    {
+        <a asp-route="category" asp-route-urlSlug="@category.UrlSlug">
+            <div class="category-card">
+                <div>
+                    <span class="name">
+                        @category.Name
+                    </span>
+                </div>
+            </div>
+        </a>
+    }
+</div>
